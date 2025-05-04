@@ -54,7 +54,7 @@ class PrestamoController extends Controller
                 'estado' => '1'
             ]);
             DB::commit();
-            NotificadorFacade::enviar($lector, 'Tu préstamo fue realizado.');    //Patrón de diseño Facade.
+            //NotificadorFacade::enviar($lector, 'Tu préstamo fue realizado.');    //Patrón de diseño Facade.
             return response()->json($prestamo);
             //return redirect()->route('prestamos.index')->with('success', 'Préstamo registrado');
         } catch (\App\Exceptions\ValidationException $e) {
